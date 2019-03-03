@@ -1,7 +1,8 @@
 {
     "name": "web",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "private": true,
+    "homepage": "http://rikermount.club",
     "dependencies": {
         "react": "^16.7.0",
         "react-dom": "^16.7.0",
@@ -13,7 +14,8 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "deploy": "git push heroku master"
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -23,5 +25,8 @@
         "not dead",
         "not ie <= 11",
         "not op_mini all"
-    ]
+    ],
+    "devDependencies": {
+        "gh-pages": "^2.0.1"
+    }
 }
